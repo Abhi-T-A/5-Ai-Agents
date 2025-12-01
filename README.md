@@ -1,5 +1,5 @@
 
-📘 Project Overview (Human-Written Version)
+📘 Project Overview 
 
 This project explores five major types of AI agents by implementing real-world applications in Python using Jupyter Notebook.
 Each agent model is supported with system design, theoretical background, implementation code, visualizations created using Matplotlib, and a discussion of results along with future scope.
