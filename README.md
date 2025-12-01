@@ -1,137 +1,81 @@
-📑 Project Overview
 
-This project demonstrates five fundamental AI agent models, each implemented using Python + Jupyter Notebook.
-Every agent is connected to a real-world application and includes:
+📘 Project Overview (Human-Written Version)
 
-System design
-
-Theory explanation
-
-Python implementation
-
-Visualization (Matplotlib)
-
-Results
-
-Conclusion & future scope
+This project explores five major types of AI agents by implementing real-world applications in Python using Jupyter Notebook.
+Each agent model is supported with system design, theoretical background, implementation code, visualizations created using Matplotlib, and a discussion of results along with future scope.
+The goal of the project is to clearly understand how different AI agents behave, how they make decisions, and how their complexity increases from simple reactive systems to learning-based models.
 
 🧠 1. Simple Reflex Agent — Automatic Door System
-📌 Description
 
-A basic agent that takes only the current sensor input and chooses an action.
+A Simple Reflex Agent works purely on the basis of the current input.
+In this model, an automatic door opens when it detects a person and closes when no one is present. The agent follows straightforward IF–THEN rules without maintaining any memory.
+The simulation visually shows the door opening and closing using Matplotlib.
 
-🔧 Application
+Key Highlights
 
-Automatic door opening system:
+Works only with the current sensor reading
 
-Detects Person / NoPerson
+No history or memory involved
 
-Opens or closes the door with IF–THEN rules
+Suitable for fully observable environments
 
-📝 Key Features
-
-No memory
-
-Fully observable environment
-
-Matplotlib visual animation (Open/Closed door)
+Includes a clear open/close animation
 
 🧠 2. Model-Based Reflex Agent — Smart Home Lighting
-📌 Description
 
-Uses memory to store last motion detection time.
+This agent improves on the simple reflex model by adding memory.
+Each room has a motion sensor; when movement is detected, the lights turn on. Even after motion stops, the system keeps the light on for a short duration based on stored “last seen” information.
+A grid-based visualization shows room occupancy and light status.
 
-🔧 Application
+Key Highlights
 
-Smart home lighting:
-
-Motion → Turn light ON
-
-No motion → Keep ON for hold time (e.g., 60 sec)
-
-Afterwards → Turn OFF
-
-📝 Key Features
-
-Internal state (last_seen timestamps)
+Maintains internal state (timestamps)
 
 Works in partially observable environments
 
-Grid-based visualization of rooms
+Offers more realistic smart-home behavior
 
-🧠 3. Goal-Based Agent — Self-Driving Car Traffic Light Navigation
-📌 Description
+🧠 3. Goal-Based Agent — Self-Driving Car at Traffic Lights
 
-Chooses actions based on a goal (“Safe Driving”).
+A Goal-Based Agent selects actions that help achieve its goal — here, safe driving.
+Depending on the traffic signal, the car reacts by stopping, slowing down, or moving forward.
+The simulation animates the car moving on a road and responding to traffic light changes.
 
-🔧 Application
+Key Highlights
 
-A simulated self-driving car:
+Decisions are driven by the goal (safety)
 
-Red light → Stop
+Considers the meaning of actions, not just rules
 
-Yellow → Slow down
-
-Green → Go
-
-📝 Key Features
-
-Uses goal checking before action
-
-Car and signal visual animation
-
-Demonstrates decision-making based on future consequences
+Demonstrates the difference between reactive and goal-based behavior
 
 🧠 4. Utility-Based Agent — Hospital Emergency Bed Allocation
-📌 Description
 
-Selects best action by maximizing utility.
+This agent evaluates multiple options and selects the one with the highest utility value.
+Patients have different severity levels, waiting times, and distances from beds. The agent assigns patients to beds by calculating utility using all these factors.
+A hospital grid visualization displays bed assignments in real time.
 
-🔧 Application
+Key Highlights
 
-Assigning emergency patients to available beds based on:
+Makes rational decisions using a utility formula
 
-Severity
+Balances severity, distance, and wait time
 
-Distance
-
-Waiting time
-
-📝 Key Features
-
-Computes utility = benefit − cost
-
-Allocates highest-utility patient-bed pair
-
-Hospital bed grid visualization
-
-Realistic decision-making under constraints
+Useful in real emergency ward scenarios
 
 🧠 5. Learning Agent — Disease Diagnosis System
-📌 Description
 
-Improves automatically using experience.
-Uses an incremental Naive Bayes learning model.
+The Learning Agent improves over time using experience.
+It uses a simple incremental Naive Bayes model to learn relationships between symptoms and diseases. After processing each patient case, its accuracy gradually increases.
+The learning progress is plotted as an accuracy graph.
 
-🔧 Application
+Key Highlights
 
-Predicts disease (Flu / COVID / Dengue) from symptoms:
+Learns continuously from data
 
-Fever
+Accuracy steadily improves
 
-Cough
-
-Pain
-
-Learns probabilities after each new patient case.
-
-📝 Key Features
-
-Accuracy improves over time
-
-Learning curve plotted via Matplotlib
-
-Real-world applicability to healthcare AI
+Demonstrates real-world medical AI concepts
 
 📊 Technologies Used
 
@@ -141,6 +85,6 @@ Jupyter Notebook
 
 Matplotlib
 
-NumPy / Random / Time / Datetime
+NumPy, Random, Time, Datetime
 
-Basic AI agent structures
+Core AI agent architectures
